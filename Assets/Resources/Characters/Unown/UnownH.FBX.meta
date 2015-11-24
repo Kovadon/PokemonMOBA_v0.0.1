@@ -1,0 +1,130 @@
+fileFormatVersion: 2
+guid: a685d05993983d946814cadda6f5196d
+timeCreated: 1444850819
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: EndLFeeler2
+    100002: EndLFeelerA3
+    100004: EndLFeelerB3
+    100006: EndRFeeler2
+    100008: EndRFeelerA3
+    100010: EndRFeelerB3
+    100012: EndWaist
+    100014: LFeeler1
+    100016: LFeeler2
+    100018: LFeelerA1
+    100020: LFeelerA2
+    100022: LFeelerA3
+    100024: LFeelerB1
+    100026: LFeelerB2
+    100028: LFeelerB3
+    100030: Origin
+    100032: pm0201_18
+    100034: pm0201_18_BodySkin
+    100036: RFeeler1
+    100038: RFeeler2
+    100040: RFeelerA1
+    100042: RFeelerA2
+    100044: RFeelerA3
+    100046: RFeelerB1
+    100048: RFeelerB2
+    100050: RFeelerB3
+    100052: //RootNode
+    100054: UnownH
+    100056: Waist
+    400000: EndLFeeler2
+    400002: EndLFeelerA3
+    400004: EndLFeelerB3
+    400006: EndRFeeler2
+    400008: EndRFeelerA3
+    400010: EndRFeelerB3
+    400012: EndWaist
+    400014: LFeeler1
+    400016: LFeeler2
+    400018: LFeelerA1
+    400020: LFeelerA2
+    400022: LFeelerA3
+    400024: LFeelerB1
+    400026: LFeelerB2
+    400028: LFeelerB3
+    400030: Origin
+    400032: pm0201_18
+    400034: pm0201_18_BodySkin
+    400036: RFeeler1
+    400038: RFeeler2
+    400040: RFeelerA1
+    400042: RFeelerA2
+    400044: RFeelerA3
+    400046: RFeelerB1
+    400048: RFeelerB2
+    400050: RFeelerB3
+    400052: UnownH
+    400054: //RootNode
+    400056: Waist
+    4300000: UnownH
+    9500000: //RootNode
+    13700000: UnownH
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
