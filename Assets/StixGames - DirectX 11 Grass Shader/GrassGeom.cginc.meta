@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 204a95ac9f1510640bc311769d9dd743
+labels:
+- Vegetation
+- Shader
+- Grass
+- DirectX11
+- GrassShader
+- StixGames
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -33,19 +33,19 @@ function SelectedCharacter1() {
 	Debug.Log ("Character 1 SELECTED"); //Print out in the Unity console which character was selected.
 	selectedPlayer = 1;
 	PlayerPrefs.SetInt("selectedPlayer", (selectedPlayer));
-	Application.LoadLevel ("Map1");
+	Application.LoadLevel ("RFL Map");
 }
 
 function SelectedCharacter2() {
 	Debug.Log ("Character 2 SELECTED");
 	selectedPlayer = 2;
 	PlayerPrefs.SetInt("selectedPlayer", (selectedPlayer));
-	Application.LoadLevel ("Map1");
+	Application.LoadLevel ("RFL Map");
 }
 
 function SelectedCharacter3() {
 	Debug.Log ("Character 3 SELECTED");
 	selectedPlayer = 3;
 	PlayerPrefs.SetInt("selectedPlayer", (selectedPlayer));
-	Application.LoadLevel ("Map1");
+	Application.LoadLevel ("RFL Map");
 }
