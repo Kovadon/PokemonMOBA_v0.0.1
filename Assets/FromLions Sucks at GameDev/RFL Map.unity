@@ -4020,7 +4020,7 @@ GameObject:
   - 4: {fileID: 429586501}
   - 192: {fileID: 429586500}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Occlusion Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
