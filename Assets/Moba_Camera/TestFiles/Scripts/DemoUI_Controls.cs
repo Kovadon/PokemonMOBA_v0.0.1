@@ -119,12 +119,12 @@ public class DemoUI_Controls : MonoBehaviour {
 			// Cycle through targets
 			GUI.Box(new Rect(10, 480, 100, 25), "Camera Height");
 			if(GUI.Button(new Rect(110, 480, 50, 25), "+")) {
-				++mCam.settings.movement.defualtHeight;
+				++mCam.settings.movement.defaultHeight;
 			}
-			camHeight = mCam.settings.movement.defualtHeight.ToString();
+			camHeight = mCam.settings.movement.defaultHeight.ToString();
 			GUI.TextField(new Rect(160, 480, 50, 25), camHeight);
 			if(GUI.Button(new Rect(210, 480, 50, 25), "-")) {
-				--mCam.settings.movement.defualtHeight;
+				--mCam.settings.movement.defaultHeight;
 			}
 			
 			GUI.Box(new Rect(10, 510, 200, 25), "Set Height to Target(locked):");
@@ -160,7 +160,7 @@ public class DemoUI_Controls : MonoBehaviour {
 				mCam.settings.useBoundaries = true;
 				mCam.settings.rotation.constRotationRate = false;
 				mCam.settings.zoom.constZoomRate = false;	
-				mCam.settings.movement.defualtHeight = 5;
+				mCam.settings.movement.defaultHeight = 5;
 				mCam.settings.movement.useLockTargetHeight = true;
 				mCam.settings.movement.edgeHoverMovement = true;
 			}

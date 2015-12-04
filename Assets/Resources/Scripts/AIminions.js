@@ -1,5 +1,6 @@
 //****** Donations are greatly appreciated.  ******
 //****** You can donate directly to Jesse through paypal at  jesse_etzler@yahoo.com   ******
+#pragma strict
 
 var target : Transform;
 var rotationSpeed = 5;
@@ -7,7 +8,7 @@ var myTransform : Transform;
 var canMove : boolean = true;
 var inCombat : boolean = false;
 var fireSpell : Transform;
-var pathingCooldown : boolean = false;
+//var pathingCooldown : boolean = false;
 var atTower1 : boolean = false;
 var attackCooldown : boolean = false;
 
@@ -18,10 +19,10 @@ function Awake() {
 
 function Start() {
 
-	target = GameObject.FindWithTag("node2").transform;
+	//target = GameObject.FindWithTag("node2").transform;
 }
 
-function Update () {
+function FixedUpdate () {
 
 	if(TowerScript.tower1destroyed == false && atTower1 == true && attackCooldown == false) {
 
@@ -34,7 +35,7 @@ function Update () {
 		canMove = true;
 	}
 
-	if(canMove == true && inCombat == false ) {
+	if(canMove == true && inCombat == false) {
 		var moveSpeed = Random.Range(10,150);
 		var randomPathing = Random.Range(0,2);
 		var randomSpeed = Random.Range(-160,160);
@@ -49,6 +50,7 @@ function Update () {
         if(randomPathing == 1) {
 		myTransform.position += myTransform.right * randomSpeed * Time.deltaTime;
 	}
+	
 	}
 }
 
