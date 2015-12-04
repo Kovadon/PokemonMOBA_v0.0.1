@@ -2081,7 +2081,7 @@ NavMeshData:
     m_Area: 2
     m_LinkDirection: 0
   - m_Start: {x: 230.333344, y: 6.13444853, z: -136}
-    m_End: {x: 227.000015, y: .12469101, z: -136}
+    m_End: {x: 227.000015, y: .124693394, z: -136}
     m_Radius: 1
     m_LinkType: 1
     m_Area: 2
@@ -2093,7 +2093,7 @@ NavMeshData:
     m_Area: 2
     m_LinkDirection: 0
   - m_Start: {x: 230.333344, y: 6.13444853, z: -138}
-    m_End: {x: 227.000015, y: .125261307, z: -138}
+    m_End: {x: 227.000015, y: .125263691, z: -138}
     m_Radius: 1
     m_LinkType: 1
     m_Area: 2
@@ -2105,7 +2105,7 @@ NavMeshData:
     m_Area: 2
     m_LinkDirection: 0
   - m_Start: {x: 230.333344, y: 6.13444853, z: -140}
-    m_End: {x: 227.000015, y: .125831604, z: -140}
+    m_End: {x: 227.000015, y: .125833511, z: -140}
     m_Radius: 1
     m_LinkType: 1
     m_Area: 2
@@ -2117,7 +2117,7 @@ NavMeshData:
     m_Area: 2
     m_LinkDirection: 0
   - m_Start: {x: 230.333344, y: 6.13444853, z: -142}
-    m_End: {x: 227.000015, y: .126401901, z: -142}
+    m_End: {x: 227.000015, y: .126403332, z: -142}
     m_Radius: 1
     m_LinkType: 1
     m_Area: 2
@@ -2129,7 +2129,7 @@ NavMeshData:
     m_Area: 2
     m_LinkDirection: 0
   - m_Start: {x: 230.333344, y: 6.13444853, z: -144}
-    m_End: {x: 227.000015, y: .126971722, z: -144}
+    m_End: {x: 227.000015, y: .126973629, z: -144}
     m_Radius: 1
     m_LinkType: 1
     m_Area: 2
@@ -2141,7 +2141,7 @@ NavMeshData:
     m_Area: 2
     m_LinkDirection: 0
   - m_Start: {x: 230.333344, y: 6.13444853, z: -146}
-    m_End: {x: 227.000015, y: .127542019, z: -146}
+    m_End: {x: 227.000015, y: .127543449, z: -146}
     m_Radius: 1
     m_LinkType: 1
     m_Area: 2
@@ -2153,7 +2153,7 @@ NavMeshData:
     m_Area: 2
     m_LinkDirection: 0
   - m_Start: {x: 230.333344, y: 6.13444853, z: -148}
-    m_End: {x: 227.000015, y: .128112316, z: -148}
+    m_End: {x: 227.000015, y: .128113747, z: -148}
     m_Radius: 1
     m_LinkType: 1
     m_Area: 2
@@ -2165,7 +2165,7 @@ NavMeshData:
     m_Area: 2
     m_LinkDirection: 0
   - m_Start: {x: 230.333344, y: 6.13444853, z: -150}
-    m_End: {x: 227.000015, y: .128682613, z: -150}
+    m_End: {x: 227.000015, y: .128683567, z: -150}
     m_Radius: 1
     m_LinkType: 1
     m_Area: 2
@@ -2177,7 +2177,7 @@ NavMeshData:
     m_Area: 2
     m_LinkDirection: 0
   - m_Start: {x: 230.333344, y: 6.13444853, z: -152}
-    m_End: {x: 227.000015, y: .129252434, z: -152}
+    m_End: {x: 227.000015, y: .129253864, z: -152}
     m_Radius: 1
     m_LinkType: 1
     m_Area: 2
@@ -2189,7 +2189,7 @@ NavMeshData:
     m_Area: 2
     m_LinkDirection: 0
   - m_Start: {x: 230.333344, y: 6.13444853, z: -154}
-    m_End: {x: 227.000015, y: .129822731, z: -154}
+    m_End: {x: 227.000015, y: .129823685, z: -154}
     m_Radius: 1
     m_LinkType: 1
     m_Area: 2
@@ -2201,7 +2201,7 @@ NavMeshData:
     m_Area: 2
     m_LinkDirection: 0
   - m_Start: {x: 230.333344, y: 6.13444853, z: -156}
-    m_End: {x: 227.000015, y: .130393028, z: -156}
+    m_End: {x: 227.000015, y: .130393982, z: -156}
     m_Radius: 1
     m_LinkType: 1
     m_Area: 2
@@ -2213,7 +2213,7 @@ NavMeshData:
     m_Area: 2
     m_LinkDirection: 0
   - m_Start: {x: 230.333344, y: 6.13444853, z: -158}
-    m_End: {x: 227.000015, y: .130962849, z: -158}
+    m_End: {x: 227.000015, y: .130963802, z: -158}
     m_Radius: 1
     m_LinkType: 1
     m_Area: 2
@@ -2225,7 +2225,7 @@ NavMeshData:
     m_Area: 2
     m_LinkDirection: 0
   - m_Start: {x: 230.333344, y: 6.13444853, z: -160}
-    m_End: {x: 227.000015, y: .131533146, z: -160}
+    m_End: {x: 227.000015, y: .1315341, z: -160}
     m_Radius: 1
     m_LinkType: 1
     m_Area: 2
@@ -2237,7 +2237,7 @@ NavMeshData:
     m_Area: 2
     m_LinkDirection: 0
   - m_Start: {x: 230.333344, y: 6.13444853, z: -162}
-    m_End: {x: 227.000015, y: .132103443, z: -162}
+    m_End: {x: 227.000015, y: .13210392, z: -162}
     m_Radius: 1
     m_LinkType: 1
     m_Area: 2
@@ -2249,7 +2249,7 @@ NavMeshData:
     m_Area: 2
     m_LinkDirection: 0
   - m_Start: {x: 230.333344, y: 6.13444853, z: -164}
-    m_End: {x: 227.000015, y: .13267374, z: -164}
+    m_End: {x: 227.000015, y: .132674217, z: -164}
     m_Radius: 1
     m_LinkType: 1
     m_Area: 2
@@ -2261,7 +2261,7 @@ NavMeshData:
     m_Area: 2
     m_LinkDirection: 0
   - m_Start: {x: 230.333344, y: 6.13444853, z: -166}
-    m_End: {x: 227.000015, y: .133243561, z: -166}
+    m_End: {x: 227.000015, y: .133244038, z: -166}
     m_Radius: 1
     m_LinkType: 1
     m_Area: 2
@@ -2273,7 +2273,7 @@ NavMeshData:
     m_Area: 2
     m_LinkDirection: 0
   - m_Start: {x: 230.333344, y: 6.13444853, z: -168}
-    m_End: {x: 227.000015, y: .133813858, z: -168}
+    m_End: {x: 227.000015, y: .133814335, z: -168}
     m_Radius: 1
     m_LinkType: 1
     m_Area: 2
