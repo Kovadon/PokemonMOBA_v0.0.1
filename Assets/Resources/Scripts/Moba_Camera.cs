@@ -36,7 +36,7 @@
  * 
  * v0.3
  * 	-Added boundaries
- * 	-Added defualt height value to camera
+ * 	-Added default height value to camera
  * 	-Allow Camera to Change height value form defult to the locked target's height
  * 
  * v0.2
@@ -146,11 +146,11 @@ public class Moba_Camera_Settings_Movement {
 	// The Distance from the edge of the screen 
 	public float edgeHoverOffset		= 10.0f;
 	
-	// The defualt value for the height of the pivot y position
-	public float defualtHeight			= 0.0f;
+	// The default value for the height of the pivot y position
+	public float defaultHeight			= 0.0f;
 	
-	// Will set the pivot's y position to the defualtHeight when true
-	public bool useDefualtHeight 		= true;
+	// Will set the pivot's y position to the defaultHeight when true
+	public bool usedefaultHeight 		= true;
 	
 	// Uses the lock targets y position when camera locked is true
 	public bool useLockTargetHeight		= true;
@@ -166,7 +166,7 @@ public class Moba_Camera_Settings_Rotation {
 	public bool lockRotationY 			= true;
 	
 	// rotation that is used when the game starts
-	public Vector2 defualtRotation		= new Vector2(-45.0f, 0.0f);
+	public Vector2 defaultRotation		= new Vector2(-45.0f, 0.0f);
 	
 	// How fast the camera rotates
 	public Vector2 cameraRotationRate	= new Vector2(100.0f, 100.0f);
@@ -261,15 +261,15 @@ public class Moba_Camera : MonoBehaviour {
 				"Parent the Offset to the Pivot and the Camera to the Offset. See the Moba_Camera Readme for more information on setup.");
 		}
 			
-		// set values to the defualt values
+		// set values to the default values
 		_currentZoomAmount 		= settings.zoom.defaultZoom;
-		_currentCameraRotation 	= settings.rotation.defualtRotation;
+		_currentCameraRotation 	= settings.rotation.defaultRotation;
 		
-		// if using the defualt height
-		if(settings.movement.useDefualtHeight && this.enabled) {
-			// set the pivots height to the defualt height
+		// if using the default height
+		if(settings.movement.usedefaultHeight && this.enabled) {
+			// set the pivots height to the default height
 			Vector3 tempPos = requirements.pivot.transform.position;
-			tempPos.y = settings.movement.defualtHeight;
+			tempPos.y = settings.movement.defaultHeight;
 			requirements.pivot.transform.position = tempPos;
 		}
 	}
@@ -398,10 +398,10 @@ public class Moba_Camera : MonoBehaviour {
 		{
 			Vector3 target = settings.lockTargetTransform.position;
 			if((requirements.pivot.position - target).magnitude > 0.2f) {
-				if(settings.movement.useDefualtHeight 
+				if(settings.movement.usedefaultHeight 
 					&& !settings.movement.useLockTargetHeight)
 				{
-					target.y = settings.movement.defualtHeight;	
+					target.y = settings.movement.defaultHeight;	
 				}
 				else if (!settings.movement.useLockTargetHeight) 
 				{
@@ -454,8 +454,8 @@ public class Moba_Camera : MonoBehaviour {
 			Vector3 current = new Vector3(0, requirements.pivot.position.y, 0);
 			
 			
-			if(settings.movement.useDefualtHeight)
-				target.y = settings.movement.defualtHeight;
+			if(settings.movement.usedefaultHeight)
+				target.y = settings.movement.defaultHeight;
 			else
 				target.y = requirements.pivot.position.y;
 			

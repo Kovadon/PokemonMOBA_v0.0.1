@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof (Check_For_Input))]
 [RequireComponent (typeof (NavMeshAgent))]
 public class Move_To_Click : MonoBehaviour {
 
