@@ -22,10 +22,6 @@ public class Smooth_Camera_Follow : MonoBehaviour {
     {
         gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(New_Position.x, Camera_Height, New_Position.z), Time.deltaTime * 7);
 
-        if (gameObject.transform.position == new Vector3(New_Position.x, Camera_Height, New_Position.z))
-        {
-            //CancelInvoke("Follow");
-        }
     }
 	
     public void Check_For_Changes()
@@ -35,7 +31,6 @@ public class Smooth_Camera_Follow : MonoBehaviour {
         if (New_Position != Old_Position)
         {
             Old_Position = New_Position;
-            //InvokeRepeating("Follow", .5f, .01f);
         }
     }
 }

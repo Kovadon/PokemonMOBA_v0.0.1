@@ -36,7 +36,7 @@ public class Click_To_Target : MonoBehaviour
 
             Target_Decal.GetComponent<Target_Decal_Functions>().Parent = TargetHit.collider.gameObject;
             Target_Decal.GetComponent<Target_Decal_Functions>().Target_Team = TargetHit.collider.gameObject.GetComponent<Team>().Team_Name;
-            Target_Decal.GetComponent<Target_Decal_Functions>().Player_Team = Camera.GetComponent<Team>().Team_Name;
+            Target_Decal.GetComponent<Target_Decal_Functions>().Player_Team = Camera.GetComponent<Smooth_Camera_Follow>().Target.GetComponent<Team>().Team_Name;
             Target_Decal.GetComponent<Target_Decal_Functions>().NewTarget();
 
 
@@ -70,11 +70,11 @@ public class Click_To_Target : MonoBehaviour
                     Mouse_Over_Decal.GetComponent<Target_Decal_Functions>().HealthBar.gameObject.GetComponent<Renderer>().enabled = true;
 
                     Mouse_Over_Decal.transform.position = new Vector3(TargetHit.transform.position.x, .02f, TargetHit.transform.position.z);
-                    Mouse_Over_Decal.gameObject.transform.SetParent(TargetHit.transform);
+                    Mouse_Over_Decal.gameObject.transform.SetParent(TargetHit.transform, true);
 
                     Mouse_Over_Decal.GetComponent<Target_Decal_Functions>().Parent = TargetHit.collider.gameObject;
                     Mouse_Over_Decal.GetComponent<Target_Decal_Functions>().Target_Team = TargetHit.collider.gameObject.GetComponent<Team>().Team_Name;
-                    Mouse_Over_Decal.GetComponent<Target_Decal_Functions>().Player_Team = Camera.GetComponent<Team>().Team_Name;
+                    Mouse_Over_Decal.GetComponent<Target_Decal_Functions>().Player_Team = Camera.GetComponent<Smooth_Camera_Follow>().Target.GetComponent<Team>().Team_Name;
                     Mouse_Over_Decal.GetComponent<Target_Decal_Functions>().NewTarget();
                 }
                 else
