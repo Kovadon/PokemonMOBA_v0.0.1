@@ -853,10 +853,10 @@ GameObject:
   - 65: {fileID: 532711890}
   - 65: {fileID: 532711889}
   - 114: {fileID: 532711888}
-  - 114: {fileID: 532711887}
   - 114: {fileID: 532711886}
   - 114: {fileID: 532711894}
   - 114: {fileID: 532711895}
+  - 114: {fileID: 532711887}
   m_Layer: 0
   m_Name: Charizard
   m_TagString: Untagged
@@ -897,17 +897,17 @@ MonoBehaviour:
 --- !u!114 &532711887
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11401762, guid: 6bbaa46874a7db84b962625e4c5160c0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1570483334}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 532711884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd1120b4ffe717649b884cdf325cdfe2, type: 3}
+  m_Script: {fileID: 11500000, guid: f33c557058322524ebe81fe35b5b8c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 0
-  Speed: 0
+  Starting_Speed: 3
+  Old_Speed: 0
+  Current_Speed: 10
 --- !u!114 &532711888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2407,7 +2407,8 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6bbaa46874a7db84b962625e4c5160c0, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1602126585
@@ -2781,7 +2782,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1811099265}
   m_LocalRotation: {x: .408217937, y: -.234569728, z: .109381676, w: .875426054}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 23.0200005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
