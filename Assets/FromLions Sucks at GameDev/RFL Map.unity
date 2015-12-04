@@ -18589,7 +18589,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1785719835}
-  - 114: {fileID: 1785719836}
   - 54: {fileID: 1785719838}
   - 65: {fileID: 1785719837}
   - 114: {fileID: 1785719839}
@@ -18618,18 +18617,6 @@ Transform:
   - {fileID: 1951644638}
   m_Father: {fileID: 0}
   m_RootOrder: 2
---- !u!114 &1785719836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1785719834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57d8539aa80cf3245a1af1feff00a76e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
 --- !u!65 &1785719837
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18690,7 +18677,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1785719834}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83976496562394547b4520dce0c17183, type: 3}
   m_Name: 
@@ -18703,7 +18690,7 @@ NavMeshAgent:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1785719834}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 1
   m_Speed: 5
   m_Acceleration: 8
@@ -21425,7 +21412,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2076458129}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06dda8eacc1f1a84593ce1572f28cd87, type: 3}
   m_Name: 
