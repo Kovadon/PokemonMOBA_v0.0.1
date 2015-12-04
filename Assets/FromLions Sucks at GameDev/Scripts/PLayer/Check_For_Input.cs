@@ -35,5 +35,7 @@ public class Check_For_Input : MonoBehaviour {
             gameObject.GetComponent<Move_To_Click>().Camera_Lower();
         }
 
+        gameObject.GetComponent<Move_To_Click>().Camera.GetComponent<Click_To_Target>().MouseOverTarget();
+
     }
 }

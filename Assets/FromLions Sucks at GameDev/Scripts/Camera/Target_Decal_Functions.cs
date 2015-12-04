@@ -46,7 +46,7 @@ public class Target_Decal_Functions : MonoBehaviour {
 
     public void UpdateHealthBar()
     {
-        HealthBar.GetComponent<Health_Bar_1>().Current_Health = Parent.GetComponentInChildren<Health_Pool>().Current_Health;
+        HealthBar.GetComponent<Health_Bar_1>().Current_Health = Parent.GetComponent<Health_Pool>().Current_Health;
         HealthBar.GetComponent<Health_Bar_1>().DoWork();
         HealthBar.GetComponent<Health_Bar_1>().InvokeRepeating("Check_Health", 0, .1f);
     }
