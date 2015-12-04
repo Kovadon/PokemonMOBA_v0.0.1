@@ -4,7 +4,7 @@ using System.Collections;
 public class Move_To_Click : MonoBehaviour {
 
     public Vector3 Destination;
-    public float Speed;
+    public int Speed;
     public GameObject Camera;
 
     public Quaternion Target_Rotation;
@@ -13,7 +13,7 @@ public class Move_To_Click : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        Speed = gameObject.GetComponent<Player_Information>().Speed;
+        Speed = gameObject.GetComponent<Movement_Speed>().Current_Speed;
         Camera.GetComponent<Team>().Team_Blue = gameObject.GetComponent<Team>().Team_Blue;
         Camera.GetComponent<Team>().Team_Red = gameObject.GetComponent<Team>().Team_Red;
         Camera.GetComponent<Team>().Neutral = gameObject.GetComponent<Team>().Neutral;
@@ -23,7 +23,7 @@ public class Move_To_Click : MonoBehaviour {
 
     void SmoothMove()
     {
-        Speed = gameObject.GetComponent<Player_Information>().Speed;
+        Speed = gameObject.GetComponent<Movement_Speed>().Current_Speed;
 
         gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, Destination, Time.deltaTime * Speed);
         transform.rotation = Quaternion.Slerp(transform.rotation, Target_Rotation, Time.deltaTime * Speed);
