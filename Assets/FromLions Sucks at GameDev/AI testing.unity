@@ -778,6 +778,10 @@ Prefab:
       propertyPath: m_Name
       value: MouseOverDecal
       objectReference: {fileID: 0}
+    - target: {fileID: 11411428, guid: a10fec9cf493f1a4b89aa16ea2575504, type: 2}
+      propertyPath: Parent
+      value: 
+      objectReference: {fileID: 2091725740}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a10fec9cf493f1a4b89aa16ea2575504, type: 2}
   m_IsPrefabParent: 0
@@ -2642,6 +2646,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 11411428, guid: a10fec9cf493f1a4b89aa16ea2575504, type: 2}
+      propertyPath: Parent
+      value: 
+      objectReference: {fileID: 318670250}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a10fec9cf493f1a4b89aa16ea2575504, type: 2}
   m_IsPrefabParent: 0

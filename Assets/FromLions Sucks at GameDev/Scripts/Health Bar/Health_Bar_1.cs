@@ -9,6 +9,7 @@ public class Health_Bar_1 : MonoBehaviour {
     public float Current_Health;
     public float Old_Health;
     public Vector3 Anchor_Position;
+    public GameObject Parent;
 
     public Vector3 Position;
 
@@ -52,6 +53,8 @@ public class Health_Bar_1 : MonoBehaviour {
 	
 
 	public void Check_Health() {
+
+        Current_Health = Parent.gameObject.GetComponent<Target_Decal_Functions>().Parent.gameObject.GetComponent<Health_Pool>().Current_Health;
 
 
         if (Control_Number < 0)
