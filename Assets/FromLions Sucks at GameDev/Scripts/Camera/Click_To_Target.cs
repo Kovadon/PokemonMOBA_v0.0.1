@@ -22,6 +22,7 @@ public class Click_To_Target : MonoBehaviour
 
     public void GetTarget ()
     {
+        Debug.Log("Getting target");
         Ray Target = Camera.ScreenPointToRay(Input.mousePosition);
         RaycastHit TargetHit = new RaycastHit();
         if (Physics.Raycast(Target, out TargetHit, 1000, Targeting_Layermask))
