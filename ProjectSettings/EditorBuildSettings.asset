@@ -6,10 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MainMenu.unity
+    path: Assets/scenes/Menu/MainMenu.unity
   - enabled: 1
-    path: Assets/CharSelect.unity
+    path: Assets/scenes/Menu/CharSelect.unity
   - enabled: 1
-    path: Assets/FromLions Sucks at GameDev/RFL Map.unity
-  - enabled: 1
-    path: Assets/TestMap_Unified.unity
+    path: Assets/scenes/RFL Map.unity
