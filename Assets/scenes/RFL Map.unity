@@ -12195,8 +12195,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 145824904}
-  moveSpeed: 0
-  rotationSpeed: 0
 --- !u!195 &861354508
 NavMeshAgent:
   m_ObjectHideFlags: 0
