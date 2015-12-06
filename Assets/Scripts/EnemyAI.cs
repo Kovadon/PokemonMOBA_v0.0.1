@@ -18,14 +18,15 @@ public class EnemyAI : MonoBehaviour {
 			targetPlayer = GameObject.FindWithTag ("Character").transform;
 		}
 		CachedNavMeshAgent = gameObject.GetComponent<NavMeshAgent>();
+		InvokeRepeating ("UpdateNavMeshAgent", (float) 0.0, (float) 0.1);
     }
 
 	void Start ()
     {
 
 	}
-	
-	void FixedUpdate ()
+
+	private void UpdateNavMeshAgent ()
     {
 		CachedNavMeshAgent.destination = targetPlayer.position;
 	}
