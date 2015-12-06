@@ -1,31 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof (NavMeshAgent))]
 public class EnemyAI : MonoBehaviour {
 
-    public Transform targetPlayer;
-    public Transform myEnemy;
-    private int moveSpeed = 5;
-    private int rotationSpeed = 5;
+	public Transform targetPlayer;
+    //public GameObject myEnemy;
+	private NavMeshAgent CachedNavMeshAgent;
+    //public int moveSpeed = 5;
+    //public int rotationSpeed = 5;
 
 
     void Awake ()
     {
-        myEnemy = transform;
+        //myEnemy = transform;
+		if (! targetPlayer) {
+			targetPlayer = GameObject.FindWithTag ("Character").transform;
+		}
+		CachedNavMeshAgent = gameObject.GetComponent<NavMeshAgent>();
     }
 
-	// Use this for initialization
 	void Start ()
     {
-        targetPlayer = GameObject.FindWithTag("Character").transform;
+
 	}
 	
-	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
     {
-        var lookDir = targetPlayer.position - transform.position;
-        lookDir.y = 0;
-        myEnemy.rotation = Quaternion.Slerp(myEnemy.rotation, Quaternion.LookRotation(lookDir), rotationSpeed * Time.deltaTime);
-        myEnemy.position += myEnemy.forward * moveSpeed * Time.deltaTime;
+		CachedNavMeshAgent.destination = targetPlayer.position;
 	}
 }
