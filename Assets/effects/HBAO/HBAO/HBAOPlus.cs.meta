@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: f1ad34d2576df73428a8586fc566c6cb
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - fetchDepthShader: {fileID: 4800000, guid: 31fa11d7668ff8d4d9bfd62104e33061, type: 3}
+  - renderAoShader: {fileID: 4800000, guid: ea6a24ad7198ce54bab9a9461015a53f, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Character
+  - tower1
+  - tower1trigger
+  - node2
+  - node1
+  - minion spell
   layers:
   - Default
   - TransparentFX
@@ -13,10 +19,10 @@ TagManager:
   - UI
   - 
   - 
+  - Targetable Objects
   - 
   - 
-  - 
-  - 
+  - scenery
   - 
   - 
   - 
