@@ -47,6 +47,7 @@ public class Spawn_Lemmings : MonoBehaviour {
                 Lemming_Array[i].transform.position = transform.position + transform.forward * 8;
                 Lemming_Array[i].GetComponent<Health_Pool>().Current_Health = Starting_Health;
                 Lemming_Array[i].GetComponent<Health_Pool>().Max_Health = Starting_Health;
+                Lemming_Array[i].name = "Lemming " + i;
                 Lemming_Array[i].SetActive(true);
                 Lemming_Array[i].GetComponent<NavMeshAgent>().destination = Victim.transform.position;
                 ++Lemmings_Activated;

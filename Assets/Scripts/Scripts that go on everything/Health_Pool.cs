@@ -38,7 +38,7 @@ public class Health_Pool : MonoBehaviour
             else
             {
                 HealthBar.GetComponent<Renderer>().enabled = true;
-                HealthBar.gameObject.GetComponent<HealthBar_2>().InvokeRepeating("Update_Healthbar", 0f, .1f);
+                HealthBar.gameObject.GetComponent<HealthBar_2>().InvokeRepeating("Update_Healthbar", 0f, .01f);
             }
 
         }

@@ -37,21 +37,24 @@ public class Turret_Trigger_Detection : MonoBehaviour {
 
 
 
-
     void Start()
     {
         Resting_Rotation = Model_To_Rotate.transform.rotation;
         Rotation_Speed = gameObject.GetComponent<Movement_Speed>().Current_Speed;
         Team = gameObject.GetComponent<Team>().Team_Name;
+
+
     }
 
     void OnTriggerEnter(Collider Col)
     {
+
         if (Use_External_Trigger == false)
         {
             Object_Entering_Trigger = Col.gameObject;
+            Team = gameObject.GetComponent<Team>().Team_Name;
 
-            if (Object_Entering_Trigger.GetComponent<Team>().Team_Name != Team)
+            if (Object_Entering_Trigger.GetComponent<Team>().Team_Name != Team && Object_Entering_Trigger.GetComponent<Team>().Team_Name != "Neutral")
             {
                 ListOfTargets.Add(Object_Entering_Trigger);
 
@@ -70,18 +73,15 @@ public class Turret_Trigger_Detection : MonoBehaviour {
     public void External_Collider_Enter()
     {
         Object_Entering_Trigger = External_Collider_Object.GetComponent<External_Collider>().Object_Entering_Trigger;
+        Team = gameObject.GetComponent<Team>().Team_Name;
 
-        if (Object_Entering_Trigger.GetComponent<Team>().Team_Name != Team)
+        if (Object_Entering_Trigger.GetComponent<Team>().Team_Name != Team && Object_Entering_Trigger.GetComponent<Team>().Team_Name != "Neutral")
         {
             ListOfTargets.Add(Object_Entering_Trigger);
-
-            if (Objects_In_Range < ListOfTargets.Count)
-            {
-                ++Objects_In_Range;
-                CancelInvoke("Disengage");
-                ListOfTargets[Objects_In_Range - 1] = Object_Entering_Trigger;
-                Pick_A_Target();
-            }
+            ++Objects_In_Range;
+            CancelInvoke("Disengage");
+            ListOfTargets[Objects_In_Range - 1] = Object_Entering_Trigger;
+            Pick_A_Target();
         }
     }
 
