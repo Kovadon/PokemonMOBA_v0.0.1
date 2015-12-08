@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Target_Decal_Functions : MonoBehaviour {
 
+    /*
     public string Target_Team;
     public string Player_Team;
     public GameObject Parent;
@@ -15,7 +16,8 @@ public class Target_Decal_Functions : MonoBehaviour {
         Renderer = gameObject.GetComponent<Renderer>();
     }
 
-	// Use this for initialization
+	//changes the color and size of the decal that spawns under your target based on the targets size, and team affiliation
+
 	public void NewTarget () {
 
         gameObject.transform.localScale = new Vector3(Parent.transform.localScale.x / 8, .1f, Parent.transform.localScale.z /8);
@@ -50,4 +52,5 @@ public class Target_Decal_Functions : MonoBehaviour {
         HealthBar.GetComponent<Health_Bar_1>().DoWork();
         HealthBar.GetComponent<Health_Bar_1>().InvokeRepeating("Check_Health", 0, .1f);
     }
+    */
 }
