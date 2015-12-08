@@ -2058,6 +2058,14 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 11473336, guid: b95c1f8245f682e46af1e9705b94c8ec, type: 2}
+      propertyPath: Rotate_Y_Only
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11473336, guid: b95c1f8245f682e46af1e9705b94c8ec, type: 2}
+      propertyPath: Draw_RayCast
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b95c1f8245f682e46af1e9705b94c8ec, type: 2}
   m_IsPrefabParent: 0
@@ -5364,6 +5372,14 @@ Prefab:
     - target: {fileID: 108404, guid: 161fc20e793658441b999dafeda14551, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11487322, guid: 161fc20e793658441b999dafeda14551, type: 2}
+      propertyPath: Rotate_Y_Only
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11487322, guid: 161fc20e793658441b999dafeda14551, type: 2}
+      propertyPath: Draw_RayCast
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 161fc20e793658441b999dafeda14551, type: 2}

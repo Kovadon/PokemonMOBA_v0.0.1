@@ -12,6 +12,8 @@ public class Turret_Trigger_Detection : MonoBehaviour {
     public Quaternion Resting_Rotation;
     public Quaternion Target_Rotation;
     float Rotation_Speed;
+    public bool Rotate_Y_Only;
+
 
     // list of objects that enter the turrets range of effect
     public List<GameObject> ListOfTargets = new List<GameObject>();
@@ -131,8 +133,16 @@ public class Turret_Trigger_Detection : MonoBehaviour {
 
         if (Target.activeInHierarchy == true)
         {
-            Target_Rotation = Quaternion.LookRotation(Target.transform.position - Model_To_Rotate.transform.position);
-            Model_To_Rotate.transform.rotation = Quaternion.Slerp(Model_To_Rotate.transform.rotation, Target_Rotation, Time.deltaTime * Rotation_Speed);
+            if (Rotate_Y_Only != true)
+            {
+                Target_Rotation = Quaternion.LookRotation(Target.transform.position - Model_To_Rotate.transform.position);
+                Model_To_Rotate.transform.rotation = Quaternion.Slerp(Model_To_Rotate.transform.rotation, Target_Rotation, Time.deltaTime * Rotation_Speed);
+            }
+            else
+            {
+                Target_Rotation = Quaternion.LookRotation(new Vector3(Target.transform.position.x, Model_To_Rotate.transform.position.y, Target.transform.position.z) - Model_To_Rotate.transform.position);
+                Model_To_Rotate.transform.rotation = Quaternion.Slerp(Model_To_Rotate.transform.rotation, Target_Rotation, Time.deltaTime * Rotation_Speed);
+            }
 
             RaycastHit Ray;
             if (Physics.Raycast(Model_To_Rotate.transform.position, Model_To_Rotate.transform.forward, out Ray, 100, LayerMask))
