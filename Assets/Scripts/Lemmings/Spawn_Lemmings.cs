@@ -48,6 +48,7 @@ public class Spawn_Lemmings : MonoBehaviour {
                 Lemming_Array[i].GetComponent<Health_Pool>().Current_Health = Starting_Health;
                 Lemming_Array[i].GetComponent<Health_Pool>().Max_Health = Starting_Health;
                 Lemming_Array[i].SetActive(true);
+                Lemming_Array[i].GetComponent<NavMeshAgent>().destination = Victim.transform.position;
                 ++Lemmings_Activated;
 
                 if (Lemmings_Activated >= Lemmings_To_Spawn)

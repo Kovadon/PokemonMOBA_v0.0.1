@@ -101,7 +101,6 @@ public class Turret_Trigger_Detection : MonoBehaviour {
                 }
                 else
                 {
-                    //Destroy(ListOfTargets[i].gameObject);
                     ListOfTargets.Remove(ListOfTargets[i].gameObject);
                     Objects_In_Range = Objects_In_Range - 1;
                     Pick_A_Target();
@@ -111,15 +110,15 @@ public class Turret_Trigger_Detection : MonoBehaviour {
                 {
                     InvokeRepeating("EngageTarget", 0f, .01f);
                     gameObject.GetComponent<Test_Attack_Turret>().InvokeRepeating("Attack", 0f, .1f);
-                   // Debug.Log("Invoked Engage Target " + Time.time);
                 }
+
+                return;
             }
 
         }
         else
         {
             InvokeRepeating("Disengage", 0f, .01f);
-          //  Debug.Log("Invoked Disengaget " + Time.time);
         }
     }
 

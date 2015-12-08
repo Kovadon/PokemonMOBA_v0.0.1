@@ -148,7 +148,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &58149847
 GameObject:
   m_ObjectHideFlags: 0
@@ -2881,6 +2881,14 @@ Prefab:
       propertyPath: Victim
       value: 
       objectReference: {fileID: 1274846901}
+    - target: {fileID: 11495820, guid: 2dd875f0a63cc684a9e19ac4989a288f, type: 2}
+      propertyPath: Lemmings_To_Spawn
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11495820, guid: 2dd875f0a63cc684a9e19ac4989a288f, type: 2}
+      propertyPath: Spawn_Interval
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2dd875f0a63cc684a9e19ac4989a288f, type: 2}
   m_IsPrefabParent: 0
@@ -6567,7 +6575,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 445522, guid: e14e6b977a19c40478e5d94347a9abc8, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e14e6b977a19c40478e5d94347a9abc8, type: 2}
