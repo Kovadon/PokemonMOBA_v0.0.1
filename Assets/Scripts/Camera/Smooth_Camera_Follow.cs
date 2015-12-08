@@ -3,8 +3,9 @@ using System.Collections;
 
 public class Smooth_Camera_Follow : MonoBehaviour {
 
+
+
     public GameObject Target;
-    public Vector3 Old_Position;
     public Vector3 New_Position;
     public float Camera_Height;
 
@@ -12,25 +13,14 @@ public class Smooth_Camera_Follow : MonoBehaviour {
 	void Start () {
 
         Camera_Height = 20;
-        Target.transform.position = Old_Position;
-        InvokeRepeating("Check_For_Changes", 0f, .01f);
-        InvokeRepeating("Follow", 0f, .01f);
 
     }
 
-    public void Follow()
-    {
-        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(New_Position.x, Camera_Height, New_Position.z), 10);
-
-    }
-	
-    public void Check_For_Changes()
+    void Update()
     {
         New_Position = Target.transform.position;
+        gameObject.transform.position = new Vector3(New_Position.x, Camera_Height, New_Position.z);
 
-        if (New_Position != Old_Position)
-        {
-            Old_Position = New_Position;
-        }
     }
+
 }

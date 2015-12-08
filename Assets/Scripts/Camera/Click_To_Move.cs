@@ -11,6 +11,7 @@ public class Click_To_Move : MonoBehaviour {
     public Vector3 Destination;
 
 
+    // gets the destination for the player from raycast
 
    public void GetDestination()
     {

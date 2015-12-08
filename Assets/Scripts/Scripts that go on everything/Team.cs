@@ -3,14 +3,26 @@ using System.Collections;
 
 public class Team : MonoBehaviour {
 
+    //team affiliation information in an easy to find place
+
     public bool Team_Red;
     public bool Team_Blue;
     public bool Neutral;
 
     public string Team_Name;
 
+    public bool Get_From_External_Object;
+    public GameObject External_Object;
+
 	// Use this for initialization
 	public void Start () {
+
+        if (Get_From_External_Object == true)
+        {
+            Team_Red = External_Object.GetComponent<Team>().Team_Red;
+            Team_Blue = External_Object.GetComponent<Team>().Team_Blue;
+            Neutral = External_Object.GetComponent<Team>().Neutral;
+        }
 
         if (Team_Red == true)
         {

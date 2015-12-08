@@ -3,17 +3,26 @@ using System.Collections;
 
 public class Check_For_Input : MonoBehaviour {
 
+    /*
+    if it needs to get called like an update function would, try to stick it in here
+    */
+
     public bool LoL_Style_Click_Behavior;
 
 
-	// Use this for initialization
+
+
 	void Start () {
 
+        //control how fast we poll for input, lets us keep things independant of fram rate
         InvokeRepeating("GetInput", 0f, .001f);
 
     }
 	
-	// Update is called once per frame
+
+
+    // stick your "I need to call this every fram type stuff in here"
+
 	public void GetInput()
     {
 
@@ -21,8 +30,16 @@ public class Check_For_Input : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
-                gameObject.GetComponent<Move_To_Click>().Camera.GetComponent<Click_To_Move>().GetDestination();
-                gameObject.GetComponent<Move_To_Click>().Update_NavMesh_Destination();
+                gameObject.GetComponent<Move_To_Click>().Camera.GetComponent<Click_To_Move>().InvokeRepeating("GetDestination", 0f, .2f);
+                gameObject.GetComponent<Move_To_Click>().InvokeRepeating("Update_NavMesh_Destination", 0f, .2f);
+
+            }
+
+            if (Input.GetKeyUp(KeyCode.Mouse1))
+            {
+                gameObject.GetComponent<Move_To_Click>().Camera.GetComponent<Click_To_Move>().CancelInvoke("GetDestination");
+                gameObject.GetComponent<Move_To_Click>().CancelInvoke("Update_NavMesh_Destination");
+
             }
 
 
@@ -38,14 +55,23 @@ public class Check_For_Input : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
-                gameObject.GetComponent<Move_To_Click>().Camera.GetComponent<Click_To_Target>().GetTarget();
-                gameObject.GetComponent<Move_To_Click>().Camera.GetComponent<Click_To_Move>().GetDestination();
-                gameObject.GetComponent<Move_To_Click>().Update_NavMesh_Destination();
+                gameObject.GetComponent<Move_To_Click>().Camera.GetComponent<Click_To_Target>().InvokeRepeating("GetTarget", 0f, .2f);
+                gameObject.GetComponent<Move_To_Click>().Camera.GetComponent<Click_To_Move>().InvokeRepeating("GetDestination", 0f, .2f);
+                gameObject.GetComponent<Move_To_Click>().InvokeRepeating("Update_NavMesh_Destination", 0f, .2f);
+
+            }
+
+            if (Input.GetKeyUp(KeyCode.Mouse1))
+            {
+                gameObject.GetComponent<Move_To_Click>().Camera.GetComponent<Click_To_Target>().CancelInvoke("GetTarget");
+                gameObject.GetComponent<Move_To_Click>().Camera.GetComponent<Click_To_Move>().CancelInvoke("GetDestination");
+                gameObject.GetComponent<Move_To_Click>().CancelInvoke("Update_NavMesh_Destination");
+
             }
         }
 
 
-		if (gameObject.GetComponent<Move_To_Click> ().Camera.GetComponent<Smooth_Camera_Follow> ()) {
+
 			if (Input.GetAxisRaw ("Mouse ScrollWheel") < 0) {
 				++gameObject.GetComponent<Move_To_Click> ().Camera.GetComponent<Smooth_Camera_Follow> ().Camera_Height;
 			}
@@ -54,8 +80,11 @@ public class Check_For_Input : MonoBehaviour {
 				--gameObject.GetComponent<Move_To_Click> ().Camera.GetComponent<Smooth_Camera_Follow> ().Camera_Height;
 			}
 
+
+
+
 			gameObject.GetComponent<Move_To_Click> ().Camera.GetComponent<Click_To_Target> ().MouseOverTarget ();
 
-		}
+		
 	}
 }
