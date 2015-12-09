@@ -33,6 +33,7 @@ public class Click_To_Target : MonoBehaviour
                 {
                     Previous_Target = Active_Selected_Target;
                     Previous_Target.GetComponent<Health_Pool>().HealthBar.GetComponent<HealthBar_2>().CancelInvoke("Update_Healthbar");
+                    Previous_Target.gameObject.GetComponent<Health_Pool>().HealthBar.GetComponent<Renderer>().enabled = false;
                     Active_Selected_Target = TargetHit.collider.gameObject;
                     Active_Selected_Target.GetComponent<Health_Pool>().HealthBar.GetComponent<Renderer>().enabled = true;
                     Active_Selected_Target.GetComponent<Health_Pool>().HealthBar.GetComponent<HealthBar_2>().InvokeRepeating("Update_Healthbar", 0f, .01f);
