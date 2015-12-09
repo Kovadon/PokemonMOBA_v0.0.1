@@ -20,7 +20,7 @@ public class GrassEditor : MaterialEditor
     private static readonly string[] lightingModeLabels = {"Unlit", "Inverted Specular PBR", "Default PBR"};
     private static readonly string[] lightingModes = {"UNLIT_GRASS_LIGHTING", "", "PBR_GRASS_LIGHTING"};
 
-    private static readonly string[] defaultKeywords = {"SIMPLE_GRASS", "GRASS_WIDTH_SMOOTHING"};
+    private static readonly string[] defaultKeywords = {"SIMPLE_GRASS", "GRASS_WIDTH_SMOOTHING", "GRASS_TOP_VIEW_COMPENSATION"};
 
     public override void OnInspectorGUI()
     {
@@ -94,6 +94,7 @@ public class GrassEditor : MaterialEditor
         bool widthSmoothing = originalKeywords.Contains("GRASS_WIDTH_SMOOTHING");
         bool heightSmoothing = originalKeywords.Contains("GRASS_HEIGHT_SMOOTHING");
         bool objectMode = originalKeywords.Contains("GRASS_OBJECT_MODE");
+        bool grassTopViewCompensation = originalKeywords.Contains("GRASS_TOP_VIEW_COMPENSATION");
 
         EditorGUI.BeginChangeCheck();
 
@@ -108,10 +109,13 @@ public class GrassEditor : MaterialEditor
 
         widthSmoothing = GUILayout.Toggle(widthSmoothing, "Smooth grass width");
         heightSmoothing = GUILayout.Toggle(heightSmoothing, "Smooth grass height");
-        GUILayout.Space(20);
+        GUILayout.Space(10);
+
+        grassTopViewCompensation = GUILayout.Toggle(grassTopViewCompensation, "Improve viewing grass from above");
+        GUILayout.Space(10);
 
         objectMode = GUILayout.Toggle(objectMode, "Object space mode");
-        GUILayout.Space(20);
+        GUILayout.Space(10);
 
         if (EditorGUI.EndChangeCheck())
         {
@@ -140,6 +144,11 @@ public class GrassEditor : MaterialEditor
             if (objectMode)
             {
                 keywords.Add("GRASS_OBJECT_MODE");
+            }
+
+            if (grassTopViewCompensation)
+            {
+                keywords.Add("GRASS_TOP_VIEW_COMPENSATION");
             }
 
             targetMat.shaderKeywords = keywords.ToArray();

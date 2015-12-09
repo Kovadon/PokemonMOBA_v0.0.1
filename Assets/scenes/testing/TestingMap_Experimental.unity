@@ -42,7 +42,7 @@ LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 6
   m_GIWorkflowMode: 0
-  m_LightmapsMode: 1
+  m_LightmapsMode: 2
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 3
-    m_Resolution: 0.01
+    m_Resolution: 0.05
     m_BakeResolution: 40
     m_TextureWidth: 1024
     m_TextureHeight: 1024
@@ -149,7 +149,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &58149847
 GameObject:
   m_ObjectHideFlags: 0
@@ -2753,15 +2753,15 @@ Prefab:
       objectReference: {fileID: 1963352941}
     - target: {fileID: 11495820, guid: 2dd875f0a63cc684a9e19ac4989a288f, type: 2}
       propertyPath: Lemmings_To_Spawn
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11495820, guid: 2dd875f0a63cc684a9e19ac4989a288f, type: 2}
       propertyPath: Spawn_Interval
-      value: 5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 11495820, guid: 2dd875f0a63cc684a9e19ac4989a288f, type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11495820, guid: 2dd875f0a63cc684a9e19ac4989a288f, type: 2}
       propertyPath: Starting_Health
@@ -2992,6 +2992,20 @@ MeshFilter:
 GameObject:
   m_PrefabParentObject: {fileID: 105068, guid: 8c85d424b5f35874ba779248ceb4cb01, type: 2}
   m_PrefabInternal: {fileID: 866948177}
+--- !u!114 &723385353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 723385352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f08aed3834227634a9338f8c60bcb87d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1318878157}
+  Speed: 5
+  Camera_Minimum_Height: 0
 --- !u!114 &723385361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3591,7 +3605,16 @@ Prefab:
       propertyPath: m_HDR
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2018416, guid: 8c85d424b5f35874ba779248ceb4cb01, type: 2}
+      propertyPath: near clip plane
+      value: 8.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 2018416, guid: 8c85d424b5f35874ba779248ceb4cb01, type: 2}
+      propertyPath: far clip plane
+      value: 500
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11440698, guid: 8c85d424b5f35874ba779248ceb4cb01, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8c85d424b5f35874ba779248ceb4cb01, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &872393000
@@ -5992,7 +6015,7 @@ Transform:
   - {fileID: 1476817238}
   - {fileID: 233481489}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &1583376627
 GameObject:
   m_ObjectHideFlags: 0

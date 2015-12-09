@@ -71,7 +71,7 @@ public class Check_For_Input : MonoBehaviour {
         }
 
 
-
+        /*
 			if (Input.GetAxisRaw ("Mouse ScrollWheel") < 0) {
 				++gameObject.GetComponent<Move_To_Click> ().Camera.GetComponent<Smooth_Camera_Follow> ().Camera_Height;
 			}
@@ -79,7 +79,7 @@ public class Check_For_Input : MonoBehaviour {
 			if (Input.GetAxisRaw ("Mouse ScrollWheel") > 0) {
 				--gameObject.GetComponent<Move_To_Click> ().Camera.GetComponent<Smooth_Camera_Follow> ().Camera_Height;
 			}
-
+        */
 
 
 

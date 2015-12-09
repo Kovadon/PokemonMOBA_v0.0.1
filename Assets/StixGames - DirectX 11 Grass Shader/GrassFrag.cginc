@@ -48,10 +48,21 @@ half4 FakeGrassLighting(half3 diffColor, half3 specColor, half oneMinusRoughness
 	// and 2) on engine side "Non-important" lights have to be divided by Pi to in cases when they are injected into ambient SH
 	// NOTE: multiplication by Pi is part of single constant together with 1/4 now
 
-	half specularTerm = max(0, (V * D * nl) * unity_LightGammaCorrectionConsts_PIDiv4);// Torrance-Sparrow model, Fresnel is applied later (for optimization reasons)
+	half specularTerm = (V * D) * (UNITY_PI / 4); // Torrance-Sparrow model, Fresnel is applied later (for optimization reasons)
+	
+#if UNITY_VERSION >= 530
+	if (IsGammaSpace())
+	{
+		specularTerm = sqrt(max(1e-4h, specularTerm));
+	}
+#endif
+	
+	specularTerm = max(0, specularTerm * nl);
+
 	half diffuseTerm = disneyDiffuse * diffuseNL;
 
 	//I removed the specular global illumination term. It might be a nice effect, but it looked weird on the grass.
+	//half grazingTerm = saturate(oneMinusRoughness + (1 - oneMinusReflectivity));
 	half3 color = diffColor * (gi.diffuse + light.color * diffuseTerm)
 		+ specularTerm * light.color * FresnelTerm(specColor, lh)
 		;// +gi.specular * FresnelLerp(specColor, grazingTerm, nv);

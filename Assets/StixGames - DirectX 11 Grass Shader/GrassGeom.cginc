@@ -67,7 +67,8 @@ void geom (point GS_INPUT p[1], inout TriangleStream<FS_INPUT> triStream)
 	//Calculate viewDir and groundRight vector
 	fixed3 up = fixed3(0, 1, 0);
 	fixed3 viewDir = normalize(rendererPos - oPos);
-	
+	fixed3 cameraForward = UNITY_MATRIX_V[2].xyz;
+
 	//I'll keep this in case I ever want to orient the grass in another direction.
 	fixed3 orientationDir = viewDir;
 
@@ -203,13 +204,19 @@ void geom (point GS_INPUT p[1], inout TriangleStream<FS_INPUT> triStream)
 		}
 	#endif
 
-	fixed3 groundRight = normalize(cross(up, orientationDir));
-
 	//Init position offset
 	fixed randX = rand(randCalcPos.xz + 1000) * _Disorder * 2 - _Disorder;
 	fixed randZ = rand(randCalcPos.xz - 1000) * _Disorder * 2 - _Disorder;
-				
-	fixed2 windDir = wind(randCalcPos, fixed2(randX, randZ));
+	
+	//If grass is looked at from the top, it should still look like grass
+	#ifdef GRASS_TOP_VIEW_COMPENSATION
+		fixed topViewCompensation = 1 + pow(dot(viewDir, up), 20) * 0.8;
+		width *= topViewCompensation;
+		
+		fixed2 windDir = wind(randCalcPos, fixed2(randX, randZ) * (topViewCompensation));
+	#else
+		fixed2 windDir = wind(randCalcPos, fixed2(randX, randZ));
+	#endif
 
 	//Grass height modifier
 	fixed4 tex = tex2Dlod(_ColorMap, uv);
@@ -222,13 +229,13 @@ void geom (point GS_INPUT p[1], inout TriangleStream<FS_INPUT> triStream)
 		grassHeightMod *= p[0].smoothing;
 	#endif
 
-	//Calculate real height
-	fixed realHeight = (rand(randCalcPos.xz) * (maxHeight - minHeight) + minHeight) * grassHeightMod;
-
 	//Smooth width
 	#ifdef GRASS_WIDTH_SMOOTHING
 		width *= p[0].smoothing;
 	#endif
+
+	//Calculate real height
+	fixed realHeight = (rand(randCalcPos.xz) * (maxHeight - minHeight) + minHeight) * grassHeightMod;
 
 	//Color
 	#ifndef SHADOWPASS
@@ -241,6 +248,8 @@ void geom (point GS_INPUT p[1], inout TriangleStream<FS_INPUT> triStream)
 
 	GS_OUTPUT pIn;
 	float3 lastLeftPos = oPos;
+
+	fixed3 groundRight = normalize(cross(up, orientationDir));
 
 	//Define first vertices most values only have to be defined on the first vertex and will be used for the others as well
 	pIn.vertex = float4(lastLeftPos,1);

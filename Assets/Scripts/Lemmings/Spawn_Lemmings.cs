@@ -50,6 +50,7 @@ public class Spawn_Lemmings : MonoBehaviour {
                 Lemming_Array[i].name = "Lemming " + i;
                 Lemming_Array[i].SetActive(true);
                 Lemming_Array[i].GetComponent<NavMeshAgent>().destination = Victim.transform.position;
+                Lemming_Array[i].GetComponent<Health_Pool>().Invoke("Change_Health", .3f);
                 ++Lemmings_Activated;
 
                 if (Lemmings_Activated >= Lemmings_To_Spawn)
