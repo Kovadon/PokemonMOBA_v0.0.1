@@ -166,7 +166,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 161736}
   m_Enabled: 1
   m_Radius: 1.1962471
-  m_Speed: 20
+  m_Speed: 10
   m_Acceleration: 100
   avoidancePriority: 50
   m_AngularSpeed: 1000
@@ -187,7 +187,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: m_Speed
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: Visible_On_Start

@@ -93,7 +93,7 @@ public class Turret_Trigger_Detection : MonoBehaviour {
     {
         CancelInvoke("EngageTarget");
         //hook up your attacks in here
-        gameObject.GetComponent<Test_Attack_Turret>().CancelInvoke("Attack");
+        gameObject.GetComponent<Projectile_attack>().CancelInvoke("Attack");
 
         if (Objects_In_Range != 0)
         {
@@ -114,7 +114,9 @@ public class Turret_Trigger_Detection : MonoBehaviour {
                 if (Target.gameObject.activeSelf == true)
                 {
                     InvokeRepeating("EngageTarget", 0f, .01f);
-                    gameObject.GetComponent<Test_Attack_Turret>().InvokeRepeating("Attack", 0f, .01f);
+                    // gameObject.GetComponent<Test_Attack_Turret>().InvokeRepeating("Attack", 0f, .01f);
+                    gameObject.GetComponent<Projectile_attack>().InvokeRepeating("Attack", 0f, .01f);
+
                 }
 
                 return;

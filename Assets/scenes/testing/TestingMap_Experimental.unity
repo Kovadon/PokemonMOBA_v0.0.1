@@ -149,7 +149,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &58149847
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,6 +1368,10 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d12affe8a1f97a04985e34f1d6d3183e, type: 2}
   m_PrefabInternal: {fileID: 1700992709}
+--- !u!1 &251269835 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 178974, guid: 459f3272167b09a4a8caeaeb87ce4e8c, type: 2}
+  m_PrefabInternal: {fileID: 1431091354}
 --- !u!1 &260893166
 GameObject:
   m_ObjectHideFlags: 0
@@ -2178,7 +2182,7 @@ GameObject:
   - 4: {fileID: 430607966}
   - 218: {fileID: 430607965}
   - 154: {fileID: 430607964}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2237,7 +2241,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1001 &480308776
 Prefab:
   m_ObjectHideFlags: 0
@@ -2996,7 +3000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f08aed3834227634a9338f8c60bcb87d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1318878157}
+  target: {fileID: 251269835}
   Speed: 5
   Camera_Minimum_Height: 0
 --- !u!114 &723385354
@@ -3107,7 +3111,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
 --- !u!114 &723385361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4956,10 +4960,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400004, guid: b534b4c0581912743b58c058a22f1663, type: 2}
   m_PrefabInternal: {fileID: 1286550919}
---- !u!1 &1318878157 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 119410, guid: 459f3272167b09a4a8caeaeb87ce4e8c, type: 2}
-  m_PrefabInternal: {fileID: 1431091354}
 --- !u!1001 &1325921796
 Prefab:
   m_ObjectHideFlags: 0
@@ -5692,6 +5692,10 @@ Prefab:
       propertyPath: Neutral
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11464640, guid: 459f3272167b09a4a8caeaeb87ce4e8c, type: 2}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 723385352}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 459f3272167b09a4a8caeaeb87ce4e8c, type: 2}
   m_IsPrefabParent: 0
