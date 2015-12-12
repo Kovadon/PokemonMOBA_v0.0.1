@@ -88,7 +88,6 @@
 			#pragma domain domain
 			#pragma geometry geom
 			#pragma fragment frag
-			#pragma target 5.0
 			#pragma multi_compile_fog
 			#pragma multi_compile_fwdbase
 
@@ -100,6 +99,7 @@
 			#pragma shader_feature __ GRASS_WIDTH_SMOOTHING
 			#pragma shader_feature __ GRASS_OBJECT_MODE
 			#pragma multi_compile  __ GRASS_RENDERTEXTURE_DISPLACEMENT
+			#pragma multi_compile  __ GRASS_TOP_VIEW_COMPENSATION
 			// ================= Shader_feature block end  =================
 
 			#define UNITY_PASS_FORWARDBASE
@@ -133,7 +133,6 @@
 			#pragma domain domain
 			#pragma geometry geom
 			#pragma fragment frag
-			#pragma target 5.0
 			#pragma multi_compile_fog
 			#pragma multi_compile_fwdadd_fullshadows
 
@@ -145,6 +144,7 @@
 			#pragma shader_feature __ GRASS_WIDTH_SMOOTHING
 			#pragma shader_feature __ GRASS_OBJECT_MODE
 			#pragma multi_compile  __ GRASS_RENDERTEXTURE_DISPLACEMENT
+			#pragma multi_compile  __ GRASS_TOP_VIEW_COMPENSATION
 			// ================= Shader_feature block end  =================
 
 			#define UNITY_PASS_FORWARDADD
@@ -178,7 +178,6 @@
 			#pragma domain domain
 			#pragma geometry geom
 			#pragma fragment frag
-			#pragma target 5.0
 			#pragma multi_compile_shadowcaster
 
 			// ================= Shader_feature block start =================
@@ -189,6 +188,7 @@
 			#pragma shader_feature __ GRASS_WIDTH_SMOOTHING
 			#pragma shader_feature __ GRASS_OBJECT_MODE
 			#pragma multi_compile  __ GRASS_RENDERTEXTURE_DISPLACEMENT
+			#pragma multi_compile  __ GRASS_TOP_VIEW_COMPENSATION
 			// ================= Shader_feature block end  =================
 
 			#define UNITY_PASS_SHADOWCASTER

@@ -16,7 +16,7 @@ public class Health_Pool : MonoBehaviour
 
     public bool Visible_On_Start;
 
-    void Start()
+   public void Start()
     {
 
         if (Link_With_External_Object == false)

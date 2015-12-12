@@ -1,12 +1,5 @@
 fileFormatVersion: 2
 guid: 21babf535248b65469b255289db7f58f
-labels:
-- Vegetation
-- Shader
-- Grass
-- DirectX11
-- GrassShader
-- StixGames
 timeCreated: 1430926131
 licenseType: Store
 MonoImporter:

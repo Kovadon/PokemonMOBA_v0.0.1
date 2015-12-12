@@ -37,6 +37,8 @@ public class Turret_Trigger_Detection : MonoBehaviour {
     public bool Use_External_Trigger;
     public GameObject External_Collider_Object;
 
+    public int Kills;
+
 
 
     void Start()
@@ -91,7 +93,7 @@ public class Turret_Trigger_Detection : MonoBehaviour {
     {
         CancelInvoke("EngageTarget");
         //hook up your attacks in here
-        gameObject.GetComponent<Test_Attack_Turret>().CancelInvoke("Attack");
+        gameObject.GetComponent<Projectile_attack>().CancelInvoke("Attack");
 
         if (Objects_In_Range != 0)
         {
@@ -100,6 +102,7 @@ public class Turret_Trigger_Detection : MonoBehaviour {
                 if (ListOfTargets[i].gameObject.activeSelf == true)
                 {
                     Target = ListOfTargets[i].gameObject;
+                    Target.GetComponent<Health_Pool>().HealthBar.GetComponent<Renderer>().enabled = true;
                 }
                 else
                 {
@@ -111,7 +114,9 @@ public class Turret_Trigger_Detection : MonoBehaviour {
                 if (Target.gameObject.activeSelf == true)
                 {
                     InvokeRepeating("EngageTarget", 0f, .01f);
-                    gameObject.GetComponent<Test_Attack_Turret>().InvokeRepeating("Attack", 0f, .1f);
+                    // gameObject.GetComponent<Test_Attack_Turret>().InvokeRepeating("Attack", 0f, .01f);
+                    gameObject.GetComponent<Projectile_attack>().InvokeRepeating("Attack", 0f, .01f);
+
                 }
 
                 return;
@@ -168,9 +173,9 @@ public class Turret_Trigger_Detection : MonoBehaviour {
 
     public void External_Collider_Exit()
     {
-        --Objects_In_Range;
-        Object_Exiting_Trigger = External_Collider_Object.GetComponent<External_Collider>().Object_Entering_Trigger;
+        Object_Exiting_Trigger = External_Collider_Object.GetComponent<External_Collider>().Object_Exiting_Trigger;
         ListOfTargets.Remove(Object_Exiting_Trigger);
+        --Objects_In_Range;
         Pick_A_Target();
 
 
@@ -180,9 +185,9 @@ public class Turret_Trigger_Detection : MonoBehaviour {
     {
         if (Use_External_Trigger == false)
         {
-            --Objects_In_Range;
             Object_Exiting_Trigger = Col.gameObject;
             ListOfTargets.Remove(Object_Exiting_Trigger);
+            --Objects_In_Range;
             Pick_A_Target();
         }
     }
