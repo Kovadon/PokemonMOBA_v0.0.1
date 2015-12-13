@@ -11,8 +11,23 @@ public class Movement_Speed : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start () {
+    public void Start () {
+
+        if (gameObject.GetComponent<NavMeshAgent>() != false)
+        {
+            gameObject.GetComponent<NavMeshAgent>().speed = Starting_Speed;
+        }
+
+        Current_Speed = Starting_Speed;
 	
 	}
+
+    void Update()
+    {
+        if (Current_Speed != Starting_Speed)
+        {
+            gameObject.GetComponent<NavMeshAgent>().speed = Current_Speed;
+        }
+    }
 	
 }

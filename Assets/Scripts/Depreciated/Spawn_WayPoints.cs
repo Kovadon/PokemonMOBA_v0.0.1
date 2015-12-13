@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Spawn_WayPoints : MonoBehaviour {
     public GameObject Nest;
-
+    public GameObject WayPoint_Prefab;
     public GameObject[] WayPoints =  null;
     public GameObject Front_Door;
     public int WayPoints_To_Spawn;

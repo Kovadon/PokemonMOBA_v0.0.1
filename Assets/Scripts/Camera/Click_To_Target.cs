@@ -10,6 +10,7 @@ public class Click_To_Target : MonoBehaviour
     public GameObject Active_Selected_Target;
     public GameObject Previous_Target;
     public GameObject MouseOver_Target;
+    public GameObject Previous_MouseOver_Target;
 
     public float Distance_From_Target;
 
@@ -66,13 +67,16 @@ public class Click_To_Target : MonoBehaviour
         {
             if (TargetHit.collider.gameObject != Active_Selected_Target)
             {
+                Previous_MouseOver_Target = MouseOver_Target;
                 MouseOver_Target = TargetHit.collider.gameObject;
+
+                if (Previous_MouseOver_Target != Active_Selected_Target)
+                {
+                    Previous_MouseOver_Target.GetComponent<Health_Pool>().HealthBar.GetComponent<Renderer>().enabled = false;
+                }
+
                 MouseOver_Target.GetComponent<Health_Pool>().HealthBar.GetComponent<Renderer>().enabled = true;
                 MouseOver_Target.GetComponent<Health_Pool>().HealthBar.GetComponent<HealthBar_2>().Update_Healthbar();
-            }
-            else
-            {
-
             }
         }
         else
