@@ -82,7 +82,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 108594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.16043854, z: 0}
+  m_LocalPosition: {x: 0, y: 3.1604385, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 403756}
@@ -97,14 +97,14 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1
     height: 1
-  near clip plane: .300000012
+  near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -120,7 +120,7 @@ Camera:
   m_HDR: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
-  m_StereoSeparation: .0219999999
+  m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
 --- !u!81 &8160332
 AudioListener:
@@ -144,16 +144,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 108594}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb20110dea2a3439a8a6547c2f9273af, type: 3}
+  m_Script: {fileID: 11500000, guid: d7cb1d919748d5b4b9b302025cd586dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   useFixedUpdate: 0
   requirements:
-    pivot: {fileID: 492486}
-    offset: {fileID: 403756}
-    camera: {fileID: 2080298}
+    pivot: {fileID: 0}
+    offset: {fileID: 0}
+    camera: {fileID: 0}
   inputs:
-    useKeyCodeInputs: 0
+    useKeyCodeInputs: 1
     keycodes:
       RotateCamera: 325
       LockCamera: 108
@@ -163,41 +163,41 @@ MonoBehaviour:
       CameraMoveForward: 273
       CameraMoveBackward: 274
     axis:
-      DeltaScrollWheel: 4d6f757365205363726f6c6c576865656c
-      DeltaMouseHorizontal: 4d6f7573652058
-      DeltaMouseVertical: 4d6f7573652059
-      button_rotate_camera: 4d6f626120526f746174652043616d657261
-      button_lock_camera: 4d6f6261204c6f636b2043616d657261
-      button_char_focus: 4d6f6261204368617220466f637573
-      button_camera_move_left: 4d6f62612043616d657261204d6f7665204c656674
-      button_camera_move_right: 4d6f62612043616d657261204d6f7665205269676874
-      button_camera_move_forward: 4d6f62612043616d657261204d6f766520466f7277617264
-      button_camera_move_backward: 4d6f62612043616d657261204d6f7665204261636b77617264
+      DeltaScrollWheel: Mouse ScrollWheel
+      DeltaMouseHorizontal: Mouse X
+      DeltaMouseVertical: Mouse Y
+      button_rotate_camera: Moba Rotate Camera
+      button_lock_camera: Moba Lock Camera
+      button_char_focus: Moba Char Focus
+      button_camera_move_left: Moba Camera Move Left
+      button_camera_move_right: Moba Camera Move Right
+      button_camera_move_forward: Moba Camera Move Forward
+      button_camera_move_backward: Moba Camera Move Backward
   settings:
-    useBoundaries: 0
-    cameraLocked: 1
+    useBoundaries: 1
+    cameraLocked: 0
     lockTargetTransform: {fileID: 0}
     movement:
-      lockTransitionRate: .100000001
-      cameraMovementRate: 10
+      lockTransitionRate: 0.1
+      cameraMovementRate: 1
       edgeHoverMovement: 1
       edgeHoverOffset: 10
-      defualtHeight: 0
-      useDefualtHeight: 1
+      defaultHeight: 0
+      usedefaultHeight: 1
       useLockTargetHeight: 1
     rotation:
       constRotationRate: 0
       lockRotationX: 1
       lockRotationY: 1
-      defualtRotation: {x: -50, y: 180}
+      defaultRotation: {x: -45, y: 0}
       cameraRotationRate: {x: 100, y: 100}
     zoom:
       invertZoom: 0
       defaultZoom: 15
       minZoom: 10
       maxZoom: 20
-      zoomRate: 45
-      constZoomRate: 1
+      zoomRate: 10
+      constZoomRate: 0
 --- !u!124 &12468272
 Behaviour:
   m_ObjectHideFlags: 1
