@@ -10,7 +10,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: GameDesign_mobaCourse
+  productName: Elements of Nature
   defaultCursor: {fileID: 2800000, guid: cb9a61f280981c5488f3140a13f1c66c, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_ShowUnitySplashScreen: 1
