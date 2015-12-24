@@ -15,11 +15,11 @@ if (Input.GetMouseButtonUp (0)) {
 	            if(hit.collider.name == "Bulbasaur") 
 				SelectedCharacter1(); //Sends this click down to a function called "SelectedCharacter1(). Which is where all of our stuff happens.
 			
-				if(hit.collider.name == "Charmander")
+				else if(hit.collider.name == "Charmander")
 				SelectedCharacter2();
 					
-				if(hit.collider.name == "#000")
-				    SelectedCharacter3();
+				else if(hit.collider.name == "#000")
+				    SelectedCharacter0();
         					
 		} 
 		else
@@ -43,9 +43,9 @@ function SelectedCharacter2() {
 	Application.LoadLevel ("RFL Map");
 }
 
-function SelectedCharacter3() {
-	Debug.Log ("Character 3 SELECTED");
-	selectedPlayer = 3;
+function SelectedCharacter0() {
+	Debug.Log ("Character 0 SELECTED");
+	selectedPlayer = 0;
 	PlayerPrefs.SetInt("selectedPlayer", (selectedPlayer));
 	Application.LoadLevel ("RFL Map");
 }

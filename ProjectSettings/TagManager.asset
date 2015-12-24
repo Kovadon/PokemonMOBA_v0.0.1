@@ -10,6 +10,7 @@ TagManager:
   - node2
   - node1
   - minion spell
+  - spawingCharacter
   layers:
   - Default
   - TransparentFX
