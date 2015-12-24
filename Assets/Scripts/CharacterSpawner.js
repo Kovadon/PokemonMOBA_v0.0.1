@@ -1,9 +1,8 @@
-//#pragma strict
+#pragma strict
 //these are the player prefabs that will be automagically plugged in for us.
 //CharacterControllers included for network
 var CharacterControllers : GameObject[]; 
 var playerPrefabs : GameObject[];
-
 
 
 //this is where the script placed in the level inputs in this number for the player who was selected
@@ -22,10 +21,10 @@ function Awake() {
 
 	for(var i=0;i<playerPrefabs.Length;i++)
 	{
-		/*var current : GameObject = playerPrefabs[i];
-		if ((current).GetComponent(Transform).IsChildOf(CharacterControllers.GetComponent(Transform)))
-			//todo: finish and check what is wrong
-			Debug.LogError("Not a child"); */
+//		var current : GameObject = playerPrefabs[i];
+//		if ((current).GetComponent(Transform).IsChildOf(CharacterControllers.GetComponent(Transform)))
+//			//todo: finish and check what is wrong
+//			Debug.LogError("Not a child"); 
 		//set active if !SavedPlayer
 		playerPrefabs[i].SetActive(savedPlayer==i);
 	} 

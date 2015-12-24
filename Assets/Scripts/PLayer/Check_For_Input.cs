@@ -21,7 +21,7 @@ public class Check_For_Input : MonoBehaviour {
 	
 
 
-    // stick your "I need to call this every fram type stuff in here"
+    // stick your "I need to call this every frame type stuff in here"
 
 	public void GetInput()
     {
@@ -83,7 +83,7 @@ public class Check_For_Input : MonoBehaviour {
 
 
 
-			gameObject.GetComponent<Move_To_Click> ().Camera.GetComponent<Click_To_Target> ().MouseOverTarget ();
+			//gameObject.GetComponent<Move_To_Click> ().Camera.GetComponent<Click_To_Target> ().MouseOverTarget ();
 
 		
 	}
