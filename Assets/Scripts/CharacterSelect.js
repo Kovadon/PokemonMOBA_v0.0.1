@@ -1,5 +1,6 @@
 #pragma strict
 //this is the currently selected Player. Also the one that will be saved to PlayerPrefs
+import UnityEngine.SceneManagement;
 var selectedPlayer : int = 0;
 
 function Update() 
@@ -24,13 +25,13 @@ if (Input.GetMouseButtonUp (0)) {
 		} 
 		else
 		{
-		return;               
+			return;               
 		}
 	} 
 }
 
-function SelectedCharacter(selectedPlayer) {
+function SelectedCharacter(selectedPlayer : int) {
 	Debug.Log ("Character "+selectedPlayer+" SELECTED"); //Print out in the Unity console which character was selected.
 	PlayerPrefs.SetInt("selectedPlayer", selectedPlayer);
-	Application.LoadLevel ("RFL Map");
+	SceneManager.LoadScene ("RFL Map");
 }
