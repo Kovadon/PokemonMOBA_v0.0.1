@@ -1,5 +1,6 @@
 #pragma strict
 //this is the currently selected Player. Also the one that will be saved to PlayerPrefs
+import UnityEngine.SceneManagement;
 var selectedPlayer : int = 0;
 
 function Update() 
@@ -13,39 +14,24 @@ if (Input.GetMouseButtonUp (0)) {
 				// The pink text is where you would put the name of the object you want to click on (has attached collider).
 				
 	            if(hit.collider.name == "Bulbasaur") 
-				SelectedCharacter1(); //Sends this click down to a function called "SelectedCharacter1(). Which is where all of our stuff happens.
+					SelectedCharacter(1); //Sends this click down to a function called "SelectedCharacter1(). Which is where all of our stuff happens.
 			
-				if(hit.collider.name == "Charmander")
-				SelectedCharacter2();
+				else if(hit.collider.name == "Charmander")
+				SelectedCharacter(0);
 					
-				if(hit.collider.name == "#000")
-				    SelectedCharacter3();
+				else if(hit.collider.name == "#000")
+				    SelectedCharacter(3);
         					
 		} 
 		else
 		{
-		return;               
+			return;               
 		}
 	} 
 }
 
-function SelectedCharacter1() {
-	Debug.Log ("Character 1 SELECTED"); //Print out in the Unity console which character was selected.
-	selectedPlayer = 1;
-	PlayerPrefs.SetInt("selectedPlayer", (selectedPlayer));
-	Application.LoadLevel ("RFL Map");
-}
-
-function SelectedCharacter2() {
-	Debug.Log ("Character 2 SELECTED");
-	selectedPlayer = 2;
-	PlayerPrefs.SetInt("selectedPlayer", (selectedPlayer));
-	Application.LoadLevel ("RFL Map");
-}
-
-function SelectedCharacter3() {
-	Debug.Log ("Character 3 SELECTED");
-	selectedPlayer = 3;
-	PlayerPrefs.SetInt("selectedPlayer", (selectedPlayer));
-	Application.LoadLevel ("RFL Map");
+function SelectedCharacter(selectedPlayer : int) {
+	Debug.Log ("Character "+selectedPlayer+" SELECTED"); //Print out in the Unity console which character was selected.
+	PlayerPrefs.SetInt("selectedPlayer", selectedPlayer);
+	SceneManager.LoadScene ("RFL Map");
 }
