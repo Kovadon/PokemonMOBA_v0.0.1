@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Character
+  - tower1
+  - tower1trigger
+  - node2
+  - node1
+  - minion spell
+  - spawingCharacter
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Targetable Objects
+  - 
+  - 
+  - scenery
+  - terrain
+  - Players
+  - Turrets
+  - Enemies
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 3061887537
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0

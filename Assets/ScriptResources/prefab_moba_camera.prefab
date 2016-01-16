@@ -1,0 +1,218 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &101796
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 420302}
+  - 20: {fileID: 2080298}
+  - 92: {fileID: 9282400}
+  - 124: {fileID: 12468272}
+  - 81: {fileID: 8160332}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &104778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 403756}
+  m_Layer: 0
+  m_Name: Moba_Camera_offset
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &108594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 492486}
+  - 114: {fileID: 11409960}
+  m_Layer: 0
+  m_Name: prefab_moba_camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &403756
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104778}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 420302}
+  m_Father: {fileID: 492486}
+  m_RootOrder: 0
+--- !u!4 &420302
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 101796}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 403756}
+  m_RootOrder: 0
+--- !u!4 &492486
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108594}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.16043854, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 403756}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!20 &2080298
+Camera:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 101796}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: .300000012
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 100
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
+--- !u!81 &8160332
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 101796}
+  m_Enabled: 1
+--- !u!92 &9282400
+Behaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 101796}
+  m_Enabled: 1
+--- !u!114 &11409960
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb20110dea2a3439a8a6547c2f9273af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useFixedUpdate: 0
+  requirements:
+    pivot: {fileID: 492486}
+    offset: {fileID: 403756}
+    camera: {fileID: 2080298}
+  inputs:
+    useKeyCodeInputs: 0
+    keycodes:
+      RotateCamera: 325
+      LockCamera: 108
+      characterFocus: 32
+      CameraMoveLeft: 276
+      CameraMoveRight: 275
+      CameraMoveForward: 273
+      CameraMoveBackward: 274
+    axis:
+      DeltaScrollWheel: 4d6f757365205363726f6c6c576865656c
+      DeltaMouseHorizontal: 4d6f7573652058
+      DeltaMouseVertical: 4d6f7573652059
+      button_rotate_camera: 4d6f626120526f746174652043616d657261
+      button_lock_camera: 4d6f6261204c6f636b2043616d657261
+      button_char_focus: 4d6f6261204368617220466f637573
+      button_camera_move_left: 4d6f62612043616d657261204d6f7665204c656674
+      button_camera_move_right: 4d6f62612043616d657261204d6f7665205269676874
+      button_camera_move_forward: 4d6f62612043616d657261204d6f766520466f7277617264
+      button_camera_move_backward: 4d6f62612043616d657261204d6f7665204261636b77617264
+  settings:
+    useBoundaries: 0
+    cameraLocked: 1
+    lockTargetTransform: {fileID: 0}
+    movement:
+      lockTransitionRate: .100000001
+      cameraMovementRate: 10
+      edgeHoverMovement: 1
+      edgeHoverOffset: 10
+      defualtHeight: 0
+      useDefualtHeight: 1
+      useLockTargetHeight: 1
+    rotation:
+      constRotationRate: 0
+      lockRotationX: 1
+      lockRotationY: 1
+      defualtRotation: {x: -50, y: 180}
+      cameraRotationRate: {x: 100, y: 100}
+    zoom:
+      invertZoom: 0
+      defaultZoom: 15
+      minZoom: 10
+      maxZoom: 20
+      zoomRate: 45
+      constZoomRate: 1
+--- !u!124 &12468272
+Behaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 101796}
+  m_Enabled: 1
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 108594}
+  m_IsPrefabParent: 1
